@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Documentation</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Endpoints</h1>
+      <ul id="routes">
+        <!-- Routes will be inserted here by JavaScript -->
+      </ul>
+    </div>
+    <div class="endpoint-section">
+      <h1>Endpoint Request</h1>
+      <!-- The selected endpoint's details and request form will be here -->
+    </div>
+    <div class="response-section">
+      <h1>Response</h1>
+      <div id="response-content">
+        <!-- The response details will be shown here -->
+      </div>
+    </div>
+  </div>
+
+  <script id="routes-data" type="application/json">
+    {{routesData}}
+  </script>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
