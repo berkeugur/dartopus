@@ -2,7 +2,6 @@
 
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:dartopus/src/core/middleware.dart';
 import 'package:dartopus/src/core/request.dart';
 import 'package:dartopus/src/core/response.dart';
@@ -21,9 +20,11 @@ class DocumentationMiddleware extends Middleware {
   @override
   Future<void> handle(Request req, Response res, Future<void> Function() next) async {
     if (req.uri.path == '/docs') {
+      print("Dökümantasyonu ${req.uri.path} üzerinden kullanabilirsiniz.");
       final htmlContent = _generateHtmlDocumentation();
       res.setHeaders({'Content-Type': 'text/html'});
       res.write(htmlContent);
+
       res.close();
     } else {
       await next();

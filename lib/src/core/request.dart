@@ -12,6 +12,11 @@ class Request {
 
   /// Returns the URI of the request, including the path and query parameters.
   Uri get uri => _httpRequest.uri;
+  String get path => _httpRequest.uri.path;
+  String get query => _httpRequest.uri.query;
+  String get fragment => _httpRequest.uri.fragment;
+  String get scheme => _httpRequest.uri.scheme;
+  String get authority => _httpRequest.uri.authority;
 
   /// Returns the headers associated with the request.
   HttpHeaders get headers => _httpRequest.headers;
